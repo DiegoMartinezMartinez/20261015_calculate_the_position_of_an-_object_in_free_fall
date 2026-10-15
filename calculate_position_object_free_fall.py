@@ -23,6 +23,9 @@ GRAVEDADES = {
     "Sol": 274
 }
 VELOCIDAD_INICIAL = 0
+UBICACION_POR_DEFECTO = "Tierra"
+
+
 
 #pedir datos iniciales (altura, tiempo en el que queremos medir)
 altura_inicial = float(input("Introduce la altura desde la que lo dejamos caer (cm):"))
@@ -38,7 +41,7 @@ if ubicacion in GRAVEDADES:
     GRAVEDAD = GRAVEDADES [ubicacion]
 else:
     print("Ese sitio no existe, tarao, te pongo en la tierra")
-    GRAVEDAD = GRAVEDADES ["Tierra"]
+    GRAVEDAD = GRAVEDADES [UBICACION_POR_DEFECTO]
 
 #convertimos la funcion a python
 #como recibo la altura en cm necesito pasarla a metros
